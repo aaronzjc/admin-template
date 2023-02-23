@@ -1,7 +1,15 @@
-# Vue 3 + Vite
+### 介绍
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+基于[adminOne](https://github.com/vikdiesel/admin-one-bulma-dashboard)二次开发的`Vue3`后台管理模板。
 
-## Recommended IDE Setup
+原作品是纯静态页面，基于`Vue3`改造后，可以很好满足前后端分离的场景。
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+### 项目的特色
+
+- 底层使用`Bulma`纯css框架，知名度良好，组件丰富。
+- 支持二级菜单。
+- 支持非菜单页面高亮指定菜单。
+
+### License
+
+MIT

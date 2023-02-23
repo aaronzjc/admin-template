@@ -5,7 +5,8 @@ import Login from "@/views/Login.vue";
 import Dashboard from "@/views/Dashboard.vue";
 import Form from "@/views/Form.vue";
 import Table from "@/views/Table.vue";
-import Sub from "@/views/Sub.vue";
+import PageOne from "@/views/page/One.vue";
+import PageTwo from "@/views/page/Two.vue";
 
 const routes = [
     {
@@ -29,9 +30,14 @@ const routes = [
                 component: Table
             },
             {
-                path: "/tableSub",
-                name: "tableSub",
-                component: Sub
+                path: "/page/one",
+                name: "pageOne",
+                component: PageOne
+            },
+            {
+                path: "/page/two",
+                name: "pageTwo",
+                component: PageTwo
             }
         ]
     },

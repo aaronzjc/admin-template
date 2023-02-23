@@ -1,4 +1,4 @@
-import { mdiMonitor, mdiSquareEditOutline, mdiTable } from "@mdi/js";
+import { mdiDotsGrid, mdiMonitor, mdiSquareEditOutline, mdiTable } from "@mdi/js";
 
 export const menus = [
     {
@@ -13,18 +13,23 @@ export const menus = [
         icon: mdiSquareEditOutline
     },
     {
+        route: "table",
+        title: "数据表格",
+        icon: mdiTable
+    },
+    {
         title: "二级菜单",
-        icon: mdiTable,
+        icon: mdiDotsGrid,
         active: false,
         children: [
             {
-                route: "table",
-                title: "表格列表",
+                route: "pageOne",
+                title: "页面1",
                 active: false,
             },
             {
-                route: "tableSub",
-                title: "表格修改",
+                route: "pageTwo",
+                title: "页面2",
                 active: false,
             }
         ]
