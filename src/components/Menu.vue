@@ -64,25 +64,25 @@
         <div class="menu is-menu-main">
             <p class="menu-label">全部</p>
             <ul class="menu-list">
-                <li v-for="menu in menus">
-                    <RouterLink :to="menu.name">
-                        <Icon :path="menu.icon"></Icon>
-                        <span class="menu-item-label">{{ menu.title }}</span>
-                    </RouterLink>
-                </li>
+                <MenuItem :menu="menu" v-for="menu in menus"></MenuItem>
             </ul>
         </div>
     </aside>
 </template>
 
 <script setup>
-import { RouterLink } from 'vue-router';
 import { menus } from '@/config.js';
 import { mdiForwardburger, mdiBackburger, mdiHelpCircleOutline, mdiLogout } from '@mdi/js';
 import Icon from '@/components/Icon.vue';
 import { useStyleStore } from '@/stores/style.js';
-
+import MenuItem from '@/components/menu/Item.vue';
+import { useRouter } from 'vue-router';
 
 const styleStore = useStyleStore();
 
+const router = useRouter()
+router.beforeEach(() => {
+    styleStore.isAsideMobileOpen = false
+    styleStore.isNavMobileOpen = false
+})
 </script>

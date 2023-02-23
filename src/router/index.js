@@ -1,10 +1,11 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 
 import Admin from "@/layouts/Admin.vue";
+import Login from "@/views/Login.vue";
 import Dashboard from "@/views/Dashboard.vue";
 import Form from "@/views/Form.vue";
 import Table from "@/views/Table.vue";
-import Login from "@/views/Login.vue";
+import Sub from "@/views/Sub.vue";
 
 const routes = [
     {
@@ -13,20 +14,25 @@ const routes = [
         redirect: "dashboard",
         children: [
             {
-                path: "dashboard",
+                path: "/dashboard",
                 name: "dashboard",
                 component: Dashboard
             },
             {
-                path: "form",
+                path: "/form",
                 name: "form",
                 component: Form
             },
             {
-                path: "table",
+                path: "/table",
                 name: "table",
                 component: Table
             },
+            {
+                path: "/tableSub",
+                name: "tableSub",
+                component: Sub
+            }
         ]
     },
     {
@@ -38,7 +44,6 @@ const routes = [
 
 const router = createRouter({
     history: createWebHashHistory(),
-    linkExactActiveClass: "is-active",
     routes,
     scrollBehavior(to, from, savedPostion) {
         return savedPostion || { top: 0 }

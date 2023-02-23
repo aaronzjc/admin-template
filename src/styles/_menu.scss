@@ -1,6 +1,8 @@
 html {
     height: 100%;
-    body, #app {
+
+    body,
+    #app {
         height: 100%;
     }
 }
@@ -32,9 +34,38 @@ aside.aside {
     }
 
     .menu-list {
-        li a {
-            display: flex;
-            align-items: center;
+        li {
+            a {
+                display: flex;
+                align-items: center;
+    
+                &.has-dropdown-icon .dropdown-icon {
+                    position: absolute;
+                    right: 0;
+                }
+            }
+
+            ul {
+                display: none;
+                border-left: 0;
+                background-color: darken($base-color, 2.5%);
+                padding-left: 0;
+                margin: 0 0 $default-padding * .5;
+    
+                li {
+                    a {
+                        padding: $default-padding * .5 0 $default-padding * .5 $default-padding * 2 + .75;
+                        font-size: $aside-submenu-font-size;
+    
+                        &.has-icon {
+                            padding-left: 0;
+                        }
+                    }
+                }
+            }
+            &.is-active ul {
+                display: block;
+            }
         }
     }
 
@@ -155,7 +186,6 @@ nav.navbar {
 }
 
 @include touch {
-
     .content-box,
     nav.navbar {
         @include transition(margin-left);

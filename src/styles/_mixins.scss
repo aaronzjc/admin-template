@@ -1,5 +1,5 @@
 @mixin transition($t) {
-  transition: $t 250ms ease-in-out 50ms;
+  transition: $t 100ms ease-in-out 50ms;
 }
 
 @mixin icon-with-update-mark ($icon-base-width) {

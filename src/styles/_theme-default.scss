@@ -33,17 +33,17 @@ $menu-item-radius: 0;
 $menu-list-link-padding: $size-base * .5 0;
 $menu-label-color: lighten($base-color, 25%);
 $menu-item-color: lighten($base-color, 30%);
-$menu-item-hover-color: $white;
-$menu-item-hover-background-color: darken($base-color, 3.5%);
+$menu-item-hover-color: lighten($base-color, 60%);
+$menu-item-hover-background-color: transparent;
 $menu-item-active-color: $white;
-$menu-item-active-background-color: darken($base-color, 3.5%);
+$menu-item-active-background-color: transparent;
 $menu-list-link-padding: $size-base * .75 $size-base * .75;
 
 /* Aside: specifics */
 $aside-width: $size-base * 14;
 $aside-mobile-width: $size-base * 15;
 $aside-icon-width: $size-base * 3;
-$aside-submenu-font-size: $size-base * .95;
+$aside-submenu-font-size: $size-base * .9;
 $aside-box-shadow: none;
 $aside-background-color: $base-color;
 $aside-tools-background-color: darken($aside-background-color, 10%);
