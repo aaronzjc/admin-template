@@ -4,6 +4,8 @@
 
 原作品是纯静态页面，基于`Vue3`改造后，可以很好满足前后端分离的场景。
 
+[在线预览](https://aaronzjc.github.io/admin-template)
+
 ### 项目的特色
 
 - 底层使用`Bulma`纯css框架，知名度良好，组件丰富。

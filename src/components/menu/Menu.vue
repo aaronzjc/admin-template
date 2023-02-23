@@ -58,7 +58,7 @@
     <aside class="aside is-placed-left is-expanded">
         <div class="aside-tools">
             <div class="aside-tools-label">
-                <span>Mu - 后台管理</span>
+                <span>后台管理</span>
             </div>
         </div>
         <div class="menu is-menu-main">
