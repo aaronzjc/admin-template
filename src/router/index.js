@@ -1,8 +1,10 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 
 import Admin from "@/layouts/Admin.vue";
-import Form from "@/views/Form.vue";
 import Dashboard from "@/views/Dashboard.vue";
+import Form from "@/views/Form.vue";
+import Table from "@/views/Table.vue";
+import Login from "@/views/Login.vue";
 
 const routes = [
     {
@@ -20,7 +22,17 @@ const routes = [
                 name: "form",
                 component: Form
             },
+            {
+                path: "table",
+                name: "table",
+                component: Table
+            },
         ]
+    },
+    {
+        path: "/login",
+        name: "login",
+        component: Login,
     }
 ]
 

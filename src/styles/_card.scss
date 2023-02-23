@@ -24,6 +24,11 @@
 
   .card-header {
     border-bottom: 1px solid $base-color-light;
+    flex-direction: column;
+
+    .card-header-action {
+      padding: 1rem .75rem;
+    }
   }
 
   .card-content {

@@ -1,7 +1,8 @@
-import Form from "@/views/Form.vue";
 import Dashboard from "@/views/Dashboard.vue";
+import Form from "@/views/Form.vue";
+import Table from "@/views/Table.vue";
 
-import { mdiMonitor, mdiSquareEditOutline } from "@mdi/js";
+import { mdiMonitor, mdiSquareEditOutline, mdiTable } from "@mdi/js";
 
 export const menus = [
     {
@@ -15,7 +16,14 @@ export const menus = [
         path: "form",
         name: "form",
         component: Form,
-        title: "表单预览",
+        title: "表单示例",
         icon: mdiSquareEditOutline
-    }
+    },
+    {
+        path: "table",
+        name: "table",
+        component: Table,
+        title: "数据表格",
+        icon: mdiTable
+    },
 ];

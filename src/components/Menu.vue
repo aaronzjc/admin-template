@@ -1,19 +1,20 @@
 <template>
     <nav id="navbar-main" class="navbar is-fixed-top">
         <div class="navbar-brand">
-            <a class="navbar-item is-hidden-desktop jb-aside-mobile-toggle" @click="toggleMobileAside">
-                <Icon :path="isAsideMobileOpen ? mdiBackburger : mdiForwardburger" :size="24"></Icon>
+            <a class="navbar-item is-hidden-desktop jb-aside-mobile-toggle" @click="styleStore.toggleAside()">
+                <Icon :path="styleStore.isAsideMobileOpen ? mdiBackburger : mdiForwardburger" :size="24"></Icon>
             </a>
             <div class="navbar-item has-control">
                 <div class="control"><input placeholder="搜索..." class="input"></div>
             </div>
         </div>
         <div class="navbar-brand is-right">
-            <a class="navbar-item is-hidden-desktop jb-navbar-menu-toggle" data-target="navbar-menu">
+            <a class="navbar-item is-hidden-desktop jb-navbar-menu-toggle" data-target="navbar-menu"
+                @click="styleStore.toggleNav()">
                 <span class="icon"><i class="mdi mdi-dots-vertical"></i></span>
             </a>
         </div>
-        <div :class="['navbar-menu fadeIn animated faster']" id="navbar-menu">
+        <div :class="['navbar-menu fadeIn animated faster', { 'is-active': styleStore.isNavMobileOpen }]" id="navbar-menu">
             <div class="navbar-end">
                 <div class="navbar-item has-dropdown has-dropdown-with-icons has-divider has-user-avatar is-hoverable">
                     <a class="navbar-link is-arrowless">
@@ -34,10 +35,6 @@
                             <span class="icon"><i class="mdi mdi-settings"></i></span>
                             <span>Settings</span>
                         </a>
-                        <a class="navbar-item">
-                            <span class="icon"><i class="mdi mdi-email"></i></span>
-                            <span>Messages</span>
-                        </a>
                         <hr class="navbar-divider">
                         <a class="navbar-item">
                             <span class="icon"><i class="mdi mdi-logout"></i></span>
@@ -47,18 +44,18 @@
                 </div>
                 <a href="https://justboil.me/bulma-admin-template/free-html-dashboard/" title="About"
                     class="navbar-item has-divider is-desktop-icon-only">
-                    <span class="icon"><i class="mdi mdi-help-circle-outline"></i></span>
+                    <Icon :path="mdiHelpCircleOutline"></Icon>
                     <span>About</span>
                 </a>
                 <a title="Log out" class="navbar-item is-desktop-icon-only">
-                    <span class="icon"><i class="mdi mdi-logout"></i></span>
+                    <Icon :path="mdiLogout"></Icon>
                     <span>Log out</span>
                 </a>
             </div>
         </div>
     </nav>
 
-    <aside :class="[ 'aside is-placed-left is-expanded has-aside-left has-aside-mobile-transition has-navbar-fixed-top has-aside-expanded' ]">
+    <aside class="aside is-placed-left is-expanded">
         <div class="aside-tools">
             <div class="aside-tools-label">
                 <span>Mu - 后台管理</span>
@@ -79,26 +76,13 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
 import { RouterLink } from 'vue-router';
 import { menus } from '@/config.js';
-import { mdiForwardburger, mdiBackburger } from '@mdi/js';
+import { mdiForwardburger, mdiBackburger, mdiHelpCircleOutline, mdiLogout } from '@mdi/js';
 import Icon from '@/components/Icon.vue';
+import { useStyleStore } from '@/stores/style.js';
 
-const isAsideMobileOpen = ref(false)
 
-function toggleMobileAside() {
-    isAsideMobileOpen.value = !isAsideMobileOpen.value;
-    updateHtmlClass()
-}
+const styleStore = useStyleStore();
 
-function updateHtmlClass() {
-    if (isAsideMobileOpen.value == true) {
-        document.getElementsByTagName('html')[0].className = 'has-aside-left has-aside-mobile-transition has-navbar-fixed-top has-aside-expanded has-aside-mobile-expanded'
-    } else {
-        document.getElementsByTagName('html')[0].className = 'has-aside-left has-aside-mobile-transition has-navbar-fixed-top has-aside-expanded'
-    }
-}
-
-onMounted(updateHtmlClass)
 </script>

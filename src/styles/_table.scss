@@ -20,6 +20,8 @@ table.table {
   }
 
   td {
+    vertical-align: middle;
+    
     .image {
       margin: 0 auto;
       width: $table-avatar-size;
