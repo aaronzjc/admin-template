@@ -1,4 +1,4 @@
-import { mdiDotsGrid, mdiMonitor, mdiSquareEditOutline, mdiTable } from "@mdi/js";
+import { mdiDotsGrid, mdiLogin, mdiMonitor, mdiSquareEditOutline, mdiTable } from "@mdi/js";
 
 export const menus = [
     {
@@ -34,4 +34,9 @@ export const menus = [
             }
         ]
     },
+    {
+        route: "login",
+        title: "登录页面",
+        icon: mdiLogin
+    }
 ];
