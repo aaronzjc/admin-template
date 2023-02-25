@@ -47,6 +47,11 @@ aside.aside {
                     position: absolute;
                     right: 0;
                 }
+
+                .menu-item-label {
+                    height: 1.5rem;
+                    line-height: 1.375rem;
+                }
             }
 
             ul {
@@ -68,6 +73,7 @@ aside.aside {
                     }
                 }
             }
+
             &.is-active ul {
                 display: block;
             }
