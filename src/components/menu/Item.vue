@@ -1,21 +1,19 @@
 <template>
     <li :class="{ 'is-active': _menu.active }">
-        <Link :menu="_menu" @click="menuClick(_menu)">
-        </Link>
+        <Link :menu="_menu" @click="menuClick(_menu)"> </Link>
 
         <ul v-if="_menu.children">
             <li v-for="subMenu in _menu.children">
-                <Link :menu="subMenu" @click="menuClick(subMenu)">
-                </Link>
+                <Link :menu="subMenu" @click="menuClick(subMenu)"> </Link>
             </li>
         </ul>
     </li>
 </template>
 
 <script setup>
-import { watch, reactive,onMounted } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
-import Link from '@/components/menu/Link.vue';
+import { watch, reactive, onMounted } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import Link from '@/components/menu/Link.vue'
 
 const props = defineProps({
     menu: {

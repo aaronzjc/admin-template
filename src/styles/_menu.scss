@@ -5,6 +5,10 @@ html {
     #app {
         height: 100%;
     }
+
+    .container-box {
+        overflow-x: hidden;
+    }
 }
 
 .content-box.has-navbar-fixed-top {
@@ -38,7 +42,7 @@ aside.aside {
             a {
                 display: flex;
                 align-items: center;
-    
+
                 &.has-dropdown-icon .dropdown-icon {
                     position: absolute;
                     right: 0;
@@ -50,13 +54,14 @@ aside.aside {
                 border-left: 0;
                 background-color: darken($base-color, 2.5%);
                 padding-left: 0;
-                margin: 0 0 $default-padding * .5;
-    
+                margin: 0 0 $default-padding * 0.5;
+
                 li {
                     a {
-                        padding: $default-padding * .5 0 $default-padding * .5 $default-padding * 2 + .75;
+                        padding: $default-padding * 0.5 0 $default-padding * 0.5
+                            $default-padding * 2 + 0.75;
                         font-size: $aside-submenu-font-size;
-    
+
                         &.has-icon {
                             padding-left: 0;
                         }
@@ -70,11 +75,10 @@ aside.aside {
     }
 
     .menu-label {
-        padding: 0 $default-padding * .5;
-        margin-top: $default-padding * .5;
-        margin-bottom: $default-padding * .5;
+        padding: 0 $default-padding * 0.5;
+        margin-top: $default-padding * 0.5;
+        margin-bottom: $default-padding * 0.5;
     }
-
 }
 
 nav.navbar {
@@ -83,7 +87,7 @@ nav.navbar {
     .navbar-item {
         &.has-user-avatar {
             .is-user-avatar {
-                margin-right: $default-padding * .5;
+                margin-right: $default-padding * 0.5;
                 display: inline-flex;
                 width: $navbar-avatar-size;
                 height: $navbar-avatar-size;
@@ -128,13 +132,10 @@ nav.navbar {
     }
 }
 
-
-
 @include desktop {
     .content-box {
         &.has-aside-left {
             &.has-aside-expanded {
-
                 &,
                 nav.navbar {
                     padding-left: $aside-width;
@@ -172,7 +173,7 @@ nav.navbar {
 
             &:not(.is-desktop-icon-only) {
                 .icon:first-child {
-                    margin-right: $default-padding * .5;
+                    margin-right: $default-padding * 0.5;
                 }
             }
 
@@ -192,10 +193,6 @@ nav.navbar {
     }
 
     .content-box.has-aside-mobile-transition {
-        & {
-            overflow-x: hidden;
-        }
-
         &,
         nav.navbar {
             width: 100vw;
@@ -208,7 +205,7 @@ nav.navbar {
 
             .image {
                 img {
-                    max-width: $aside-mobile-width * .33;
+                    max-width: $aside-mobile-width * 0.33;
                 }
             }
 
@@ -233,7 +230,6 @@ nav.navbar {
     }
 
     .content-box.has-aside-mobile-expanded {
-
         &,
         nav.navbar {
             margin-left: $aside-mobile-width;
@@ -271,11 +267,11 @@ nav.navbar {
 
             .navbar-item {
                 .icon:first-child {
-                    margin-right: $default-padding * .5;
+                    margin-right: $default-padding * 0.5;
                 }
 
                 &.has-dropdown {
-                    >.navbar-link {
+                    > .navbar-link {
                         background-color: $white-ter;
 
                         .icon:last-child {
@@ -285,11 +281,11 @@ nav.navbar {
                 }
 
                 &.has-user-avatar {
-                    >.navbar-link {
+                    > .navbar-link {
                         display: flex;
                         align-items: center;
-                        padding-top: $default-padding * .5;
-                        padding-bottom: $default-padding * .5;
+                        padding-top: $default-padding * 0.5;
+                        padding-bottom: $default-padding * 0.5;
                     }
                 }
             }

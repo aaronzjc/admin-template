@@ -16,15 +16,32 @@
                         <div class="field-body">
                             <div class="field">
                                 <p class="control is-expanded has-icons-left">
-                                    <input class="input" type="text" placeholder="Name">
-                                    <span class="icon is-small is-left"><i class="mdi mdi-account"></i></span>
+                                    <input
+                                        class="input"
+                                        type="text"
+                                        placeholder="Name"
+                                    />
+                                    <span class="icon is-small is-left"
+                                        ><i class="mdi mdi-account"></i
+                                    ></span>
                                 </p>
                             </div>
                             <div class="field">
-                                <p class="control is-expanded has-icons-left has-icons-right">
-                                    <input class="input is-success" type="email" placeholder="Email" value="alex@smith.com">
-                                    <span class="icon is-small is-left"><i class="mdi mdi-mail"></i></span>
-                                    <span class="icon is-small is-right"><i class="mdi mdi-check"></i></span>
+                                <p
+                                    class="control is-expanded has-icons-left has-icons-right"
+                                >
+                                    <input
+                                        class="input is-success"
+                                        type="email"
+                                        placeholder="Email"
+                                        value="alex@smith.com"
+                                    />
+                                    <span class="icon is-small is-left"
+                                        ><i class="mdi mdi-mail"></i
+                                    ></span>
+                                    <span class="icon is-small is-right"
+                                        ><i class="mdi mdi-check"></i
+                                    ></span>
                                 </p>
                             </div>
                         </div>
@@ -35,12 +52,14 @@
                             <div class="field is-expanded">
                                 <div class="field has-addons">
                                     <p class="control">
-                                        <a class="button is-static">
-                                            +44
-                                        </a>
+                                        <a class="button is-static"> +44 </a>
                                     </p>
                                     <p class="control is-expanded">
-                                        <input class="input" type="tel" placeholder="Your phone number">
+                                        <input
+                                            class="input"
+                                            type="tel"
+                                            placeholder="Your phone number"
+                                        />
                                     </p>
                                 </div>
                                 <p class="help">Do not enter the first zero</p>
@@ -56,7 +75,9 @@
                                 <div class="control">
                                     <div class="select is-fullwidth">
                                         <select>
-                                            <option>Business development</option>
+                                            <option>
+                                                Business development
+                                            </option>
                                             <option>Marketing</option>
                                             <option>Sales</option>
                                         </select>
@@ -65,7 +86,7 @@
                             </div>
                         </div>
                     </div>
-                    <hr>
+                    <hr />
                     <div class="field is-horizontal">
                         <div class="field-label is-normal">
                             <label class="label">Subject</label>
@@ -73,7 +94,11 @@
                         <div class="field-body">
                             <div class="field">
                                 <div class="control">
-                                    <input class="input is-danger" type="text" placeholder="e.g. Partnership opportunity">
+                                    <input
+                                        class="input is-danger"
+                                        type="text"
+                                        placeholder="e.g. Partnership opportunity"
+                                    />
                                 </div>
                                 <p class="help is-danger">
                                     This field is required
@@ -89,12 +114,15 @@
                         <div class="field-body">
                             <div class="field">
                                 <div class="control">
-                                    <textarea class="textarea" placeholder="Explain how we can help you"></textarea>
+                                    <textarea
+                                        class="textarea"
+                                        placeholder="Explain how we can help you"
+                                    ></textarea>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <hr>
+                    <hr />
                     <div class="field is-horizontal">
                         <div class="field-label">
                             <!-- Left empty for spacing -->
@@ -103,12 +131,18 @@
                             <div class="field">
                                 <div class="field is-grouped">
                                     <div class="control">
-                                        <button type="submit" class="button is-primary">
+                                        <button
+                                            type="submit"
+                                            class="button is-primary"
+                                        >
                                             <span>Submit</span>
                                         </button>
                                     </div>
                                     <div class="control">
-                                        <button type="button" class="button is-primary is-outlined">
+                                        <button
+                                            type="button"
+                                            class="button is-primary is-outlined"
+                                        >
                                             <span>Reset</span>
                                         </button>
                                     </div>
@@ -122,51 +156,76 @@
         <div class="card">
             <header class="card-header">
                 <p class="card-header-title">
-                    <span class="icon"><i class="mdi mdi-ballot-outline default"></i></span>
+                    <span class="icon"
+                        ><i class="mdi mdi-ballot-outline default"></i
+                    ></span>
                     Custom elements
                 </p>
             </header>
             <div class="card-content">
                 <div class="field has-check is-horizontal">
-                    <div class="field-label"><label class="label">Checkbox</label></div>
+                    <div class="field-label">
+                        <label class="label">Checkbox</label>
+                    </div>
                     <div class="field-body">
                         <div class="field">
                             <div class="field is-grouped-multiline is-grouped">
                                 <div class="control">
-                                    <label class="b-checkbox checkbox"><input type="checkbox" value="lorem">
+                                    <label class="b-checkbox checkbox"
+                                        ><input type="checkbox" value="lorem" />
                                         <span class="check is-primary"></span>
                                         <span class="control-label">Lorem</span>
                                     </label>
                                 </div>
                                 <div class="control">
-                                    <label class="b-checkbox checkbox"><input type="checkbox" value="ipsum">
+                                    <label class="b-checkbox checkbox"
+                                        ><input type="checkbox" value="ipsum" />
                                         <span class="check is-primary"></span>
                                         <span class="control-label">Ipsum</span>
                                     </label>
                                 </div>
                                 <div class="control">
-                                    <label class="b-checkbox checkbox"><input type="checkbox" value="dolore">
+                                    <label class="b-checkbox checkbox"
+                                        ><input
+                                            type="checkbox"
+                                            value="dolore"
+                                        />
                                         <span class="check is-primary"></span>
-                                        <span class="control-label">Dolore</span>
+                                        <span class="control-label"
+                                            >Dolore</span
+                                        >
                                     </label>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <hr>
+                <hr />
                 <div class="field has-check is-horizontal">
-                    <div class="field-label"><label class="label">Radio</label></div>
+                    <div class="field-label">
+                        <label class="label">Radio</label>
+                    </div>
                     <div class="field-body">
                         <div class="field">
                             <div class="field is-grouped-multiline is-grouped">
-                                <div class="control"><label class="b-radio radio"><input type="radio" name="sample-radio"
-                                            value="one">
+                                <div class="control">
+                                    <label class="b-radio radio"
+                                        ><input
+                                            type="radio"
+                                            name="sample-radio"
+                                            value="one"
+                                        />
                                         <span class="check"></span>
                                         <span class="control-label">One</span>
-                                    </label></div>
-                                <div class="control"><label class="b-radio radio"><input type="radio" name="sample-radio"
-                                            value="two">
+                                    </label>
+                                </div>
+                                <div class="control">
+                                    <label class="b-radio radio"
+                                        ><input
+                                            type="radio"
+                                            name="sample-radio"
+                                            value="two"
+                                        />
                                         <span class="check"></span>
                                         <span class="control-label">Two</span>
                                     </label>
@@ -175,30 +234,37 @@
                         </div>
                     </div>
                 </div>
-                <hr>
+                <hr />
                 <div class="field is-horizontal">
-                    <div class="field-label"><label class="label">Switch</label></div>
+                    <div class="field-label">
+                        <label class="label">Switch</label>
+                    </div>
                     <div class="field-body">
                         <div class="field">
-                            <label class="switch is-rounded"><input type="checkbox" value="false">
+                            <label class="switch is-rounded"
+                                ><input type="checkbox" value="false" />
                                 <span class="check"></span>
                                 <span class="control-label">Default</span>
                             </label>
                         </div>
                     </div>
                 </div>
-                <hr>
+                <hr />
                 <div class="field is-horizontal">
-                    <div class="field-label is-normal"><label class="label">File</label></div>
+                    <div class="field-label is-normal">
+                        <label class="label">File</label>
+                    </div>
                     <div class="field-body">
                         <div class="field">
                             <div class="field file">
                                 <label class="upload control">
                                     <a class="button is-primary">
-                                        <span class="icon"><i class="mdi mdi-upload"></i></span>
+                                        <span class="icon"
+                                            ><i class="mdi mdi-upload"></i
+                                        ></span>
                                         <span>Pick a file</span>
                                     </a>
-                                    <input type="file">
+                                    <input type="file" />
                                 </label>
                             </div>
                         </div>
@@ -210,5 +276,5 @@
 </template>
 
 <script setup>
-import Main from '@/components/Main.vue';
+import Main from '@/components/Main.vue'
 </script>

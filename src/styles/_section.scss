@@ -1,67 +1,67 @@
 section.section.is-main-section {
-  padding: $default-padding;
+    padding: $default-padding;
 }
 
 section.section.is-title-bar {
-  padding: $size-base $default-padding;
-  border-bottom: $light-border;
+    padding: $size-base $default-padding;
+    border-bottom: $light-border;
 
-  ul {
-    li {
-      display: inline-block;
-      padding: 0 $default-padding * .5 0 0;
-      font-size: $default-padding;
-      color: $title-bar-color;
+    ul {
+        li {
+            display: inline-block;
+            padding: 0 $default-padding * 0.5 0 0;
+            font-size: $default-padding;
+            color: $title-bar-color;
 
-      &:after {
-        display: inline-block;
-        content: '/';
-        padding-left: $default-padding * .5;
-      }
+            &:after {
+                display: inline-block;
+                content: '/';
+                padding-left: $default-padding * 0.5;
+            }
 
-      &:last-child {
-        padding-right: 0;
-        color: $title-bar-active-color;
+            &:last-child {
+                padding-right: 0;
+                color: $title-bar-active-color;
 
-        &:after {
-          display: none;
+                &:after {
+                    display: none;
+                }
+            }
         }
-      }
     }
-  }
 }
 
 section.hero.is-hero-bar {
-  background-color: $hero-bar-background;
-  border-bottom: $light-border;
+    background-color: $hero-bar-background;
+    border-bottom: $light-border;
 
-  .hero-body {
-    padding: $default-padding;
+    .hero-body {
+        padding: $default-padding;
 
-    .level-item {
-      &.is-hero-avatar-item {
-        margin-right: $default-padding;
-      }
+        .level-item {
+            &.is-hero-avatar-item {
+                margin-right: $default-padding;
+            }
 
-      > div > .level {
-        margin-bottom: $default-padding * .5;
-      }
+            > div > .level {
+                margin-bottom: $default-padding * 0.5;
+            }
 
-      .subtitle + p {
-        margin-top: $default-padding * .5;
-      }
-    }
-
-    .button {
-      &.is-hero-button {
-        background-color: rgba($white, .5);
-        font-weight: 300;
-        @include transition(background-color);
-
-        &:hover {
-          background-color: $white;
+            .subtitle + p {
+                margin-top: $default-padding * 0.5;
+            }
         }
-      }
+
+        .button {
+            &.is-hero-button {
+                background-color: rgba($white, 0.5);
+                font-weight: 300;
+                @include transition(background-color);
+
+                &:hover {
+                    background-color: $white;
+                }
+            }
+        }
     }
-  }
 }

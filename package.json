@@ -1,29 +1,36 @@
 {
-  "name": "bulma-admin",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@jamescoyle/vue-icon": "^0.1.2",
-    "@mdi/js": "^7.1.96",
-    "bulma": "^0.9.4",
-    "bulma-checkbox": "^1.2.1",
-    "bulma-radio": "^1.2.0",
-    "bulma-responsive-tables": "^1.2.5",
-    "bulma-switch-control": "^1.2.2",
-    "bulma-upload-control": "^1.2.0",
-    "pinia": "^2.0.32",
-    "sass": "^1.58.3",
-    "vue": "^3.2.45",
-    "vue-router": "^4.1.6"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^4.0.0",
-    "vite": "^4.1.0"
-  }
+    "name": "bulma-admin",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "prepare": "husky install"
+    },
+    "dependencies": {
+        "@jamescoyle/vue-icon": "^0.1.2",
+        "@mdi/js": "^7.1.96",
+        "bulma": "^0.9.4",
+        "bulma-checkbox": "^1.2.1",
+        "bulma-radio": "^1.2.0",
+        "bulma-responsive-tables": "^1.2.5",
+        "bulma-switch-control": "^1.2.2",
+        "bulma-upload-control": "^1.2.0",
+        "pinia": "^2.0.32",
+        "sass": "^1.58.3",
+        "vue": "^3.2.45",
+        "vue-router": "^4.1.6"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^4.0.0",
+        "husky": "^8.0.3",
+        "lint-staged": "^13.1.2",
+        "prettier": "2.8.4",
+        "vite": "^4.1.0"
+    },
+    "lint-staged": {
+        "**/*": "prettier --write --ignore-unknown"
+    }
 }
