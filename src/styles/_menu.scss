@@ -47,6 +47,9 @@ aside.aside {
                     position: absolute;
                     right: 0;
                 }
+                &.has-dropdown-icon.is-active {
+                    color: $menu-item-color;
+                }
 
                 .menu-item-label {
                     height: 1.5rem;

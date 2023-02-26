@@ -1,14 +1,14 @@
 <template>
     <a
         :class="[
-            { 'is-active': menu.active },
-            { 'has-icon has-dropdown-icon': menu.children }
+            { 'is-active': active },
+            { 'has-icon has-dropdown-icon': dropdown }
         ]"
     >
-        <Icon v-if="menu.icon" :path="menu.icon"></Icon>
-        <span class="menu-item-label">{{ menu.title }}</span>
-        <div v-if="menu.children" class="dropdown-icon">
-            <Icon :path="menu.active ? mdiMinus : mdiPlus"></Icon>
+        <Icon v-if="icon" :path="icon"></Icon>
+        <span class="menu-item-label">{{ title }}</span>
+        <div v-if="dropdown" class="dropdown-icon">
+            <Icon :path="active ? mdiMinus : mdiPlus"></Icon>
         </div>
     </a>
 </template>
@@ -17,9 +17,15 @@ import { mdiPlus, mdiMinus } from '@mdi/js'
 import Icon from '@/components/Icon.vue'
 
 defineProps({
-    menu: {
-        type: Object,
+    title: {
+        type: String,
         required: true
-    }
+    },
+    active: {
+        type: Boolean,
+        required: true
+    },
+    icon: String,
+    dropdown: Boolean
 })
 </script>

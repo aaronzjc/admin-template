@@ -48,9 +48,7 @@
                         <div class="is-user-name">
                             <span>{{ mainStore.userInfo.username }}</span>
                         </div>
-                        <span class="icon"
-                            ><i class="mdi mdi-chevron-down"></i
-                        ></span>
+                        <Icon :path="mdiChevronDown"></Icon>
                     </a>
                     <div class="navbar-dropdown">
                         <a href="#" class="navbar-item">
@@ -112,7 +110,8 @@ import {
     mdiBackburger,
     mdiHelpCircleOutline,
     mdiLogout,
-    mdiDotsVertical
+    mdiDotsVertical,
+    mdiChevronDown
 } from '@mdi/js'
 import Icon from '@/components/Icon.vue'
 import { useStyleStore } from '@/stores/style.js'
