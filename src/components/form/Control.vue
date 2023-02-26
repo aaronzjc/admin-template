@@ -1,7 +1,7 @@
 <template>
     <div :class="controlCls">
         <slot :class="fail ? 'is-danger' : ''"></slot>
-        <Icon v-if="icon" :path="icon" size="24"></Icon>
+        <Icon v-if="icon" :path="icon" size="16"></Icon>
         <p :class="['help', fail ? 'is-danger' : '']" v-if="help">
             {{ help }}
         </p>
