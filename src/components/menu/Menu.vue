@@ -74,11 +74,11 @@
                 </div>
                 <a
                     href="https://github.com/aaronzjc"
-                    title="关于"
+                    title="Github"
                     class="navbar-item has-divider is-desktop-icon-only"
                 >
-                    <Icon :path="mdiHelpCircleOutline"></Icon>
-                    <span>关于</span>
+                    <Icon :path="mdiGithub"></Icon>
+                    <span>Github</span>
                 </a>
                 <a title="退出登录" class="navbar-item is-desktop-icon-only">
                     <Icon :path="mdiLogout"></Icon>
@@ -111,7 +111,8 @@ import {
     mdiHelpCircleOutline,
     mdiLogout,
     mdiDotsVertical,
-    mdiChevronDown
+    mdiChevronDown,
+    mdiGithub
 } from '@mdi/js'
 import Icon from '@/components/Icon.vue'
 import { useStyleStore } from '@/stores/style.js'
