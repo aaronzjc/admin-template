@@ -17,6 +17,10 @@ const props = defineProps({
     size: {
         type: [String, Number],
         default: null
+    },
+    left: {
+        type: Boolean,
+        default: true
     }
 })
 
@@ -24,7 +28,7 @@ const iconSize = computed(() => props.size ?? 16)
 </script>
 
 <template>
-    <span class="icon">
+    <span :class="['icon', { 'is-left': left }]">
         <svg
             viewBox="0 0 24 24"
             :width="iconSize"

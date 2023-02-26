@@ -5,9 +5,18 @@
         }
     }
     .control {
+        height: 100%;
+
         .mdi-24px.mdi-set,
         .mdi-24px.mdi:before {
             font-size: inherit;
+        }
+
+        .radio-group,
+        .check-group {
+            height: 100%;
+            display: flex;
+            align-items: center;
         }
     }
 }

@@ -15,9 +15,7 @@
                 ></Icon>
             </a>
             <div class="navbar-item has-control">
-                <div class="control">
-                    <input placeholder="搜索..." class="input" />
-                </div>
+                <div class="control"></div>
             </div>
         </div>
         <div class="navbar-brand is-right">
@@ -26,7 +24,7 @@
                 data-target="navbar-menu"
                 @click="styleStore.toggleNav()"
             >
-                <span class="icon"><i class="mdi mdi-dots-vertical"></i></span>
+                <Icon :path="mdiDotsVertical"></Icon>
             </a>
         </div>
         <div
@@ -113,7 +111,8 @@ import {
     mdiForwardburger,
     mdiBackburger,
     mdiHelpCircleOutline,
-    mdiLogout
+    mdiLogout,
+    mdiDotsVertical
 } from '@mdi/js'
 import Icon from '@/components/Icon.vue'
 import { useStyleStore } from '@/stores/style.js'
