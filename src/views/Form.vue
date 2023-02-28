@@ -9,7 +9,7 @@
             </header>
             <div class="card-content">
                 <form method="get">
-                    <Field label="用户信息" group>
+                    <Field label="用户信息" group horizontal>
                         <Control :icon="mdiAccount" expanded>
                             <input
                                 class="input"
@@ -26,7 +26,7 @@
                             />
                         </Control>
                     </Field>
-                    <Field label="部门">
+                    <Field label="部门" horizontal>
                         <Control>
                             <div class="select">
                                 <select>
@@ -37,8 +37,8 @@
                             </div>
                         </Control>
                     </Field>
-                    <Field label="对象">
-                        <Control help="不能为空" fail>
+                    <Field label="对象" horizontal>
+                        <Control help="不能为空">
                             <input
                                 class="input is-danger"
                                 type="text"
@@ -46,7 +46,7 @@
                             />
                         </Control>
                     </Field>
-                    <Field label="问题说明">
+                    <Field label="问题说明" horizontal>
                         <Control>
                             <textarea
                                 class="textarea"
@@ -54,7 +54,7 @@
                             ></textarea>
                         </Control>
                     </Field>
-                    <Field label="多选" :normal="false">
+                    <Field label="多选" horizontal>
                         <Control>
                             <div class="check-group">
                                 <label class="b-checkbox checkbox"
@@ -75,7 +75,7 @@
                             </div>
                         </Control>
                     </Field>
-                    <Field label="单选" :normal="false">
+                    <Field label="单选" horizontal>
                         <Control>
                             <div class="radio-group">
                                 <label class="b-radio radio"
@@ -99,7 +99,7 @@
                             </div>
                         </Control>
                     </Field>
-                    <Field label="开关" :normal="false">
+                    <Field label="开关" horizontal>
                         <Control>
                             <label class="switch is-rounded"
                                 ><input type="checkbox" value="false" />
@@ -108,7 +108,7 @@
                             </label>
                         </Control>
                     </Field>
-                    <Field label="文件提交">
+                    <Field label="文件提交" horizontal>
                         <Control>
                             <label class="upload control">
                                 <a class="button is-primary">
@@ -122,7 +122,7 @@
                         </Control>
                     </Field>
                     <hr />
-                    <Field group>
+                    <Field label=" " group horizontal>
                         <Control>
                             <button type="submit" class="button is-primary">
                                 <span>提交</span>

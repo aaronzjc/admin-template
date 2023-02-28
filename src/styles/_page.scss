@@ -1,3 +1,21 @@
+.is-divider {
+    display: flex;
+    align-items: center;
+    color: #dadada;
+    margin: 0.5rem 0;
+    font-size: $size-base * 0.8;
+    align-self: stretch;
+    gap: 1rem;
+
+    &::before,
+    &::after {
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: #dadada;
+    }
+}
+
 .is-tiles-wrapper {
     margin-bottom: $default-padding;
 }
@@ -54,7 +72,7 @@
     background-image: linear-gradient(to right top, #123456, #eee);
 
     .card-header-title {
-        padding: $default-padding 1rem;
+        padding: 1rem 1rem;
 
         span {
             font-size: $size-base * 1.3;
@@ -62,8 +80,17 @@
             color: $base-color;
         }
     }
-
     .hero-body {
         flex-grow: 0;
+    }
+
+    .field.password {
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .buttons {
+        .button:not(:last-child) {
+            margin-right: 1rem;
+        }
     }
 }

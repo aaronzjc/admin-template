@@ -2,7 +2,7 @@
     <div :class="controlCls">
         <slot :class="fail ? 'is-danger' : ''"></slot>
         <Icon v-if="icon" :path="icon" size="16"></Icon>
-        <p :class="['help', fail ? 'is-danger' : '']" v-if="help">
+        <p :class="['help is-danger']" v-if="help">
             {{ help }}
         </p>
     </div>
@@ -14,8 +14,7 @@ import Icon from '@/components/Icon.vue'
 const props = defineProps({
     expanded: Boolean,
     help: String, // 提示文字
-    icon: String, // 输入框图标
-    fail: Boolean // 校验失败
+    icon: String // 输入框图标
 })
 
 const controlCls = computed(() => {
