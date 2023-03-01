@@ -5,16 +5,16 @@
             { 'has-icon has-dropdown-icon': dropdown }
         ]"
     >
-        <Icon v-if="icon" :path="icon"></Icon>
+        <BasicIcon v-if="icon" :name="icon"></BasicIcon>
         <span class="menu-item-label">{{ title }}</span>
         <div v-if="dropdown" class="dropdown-icon">
-            <Icon :path="active ? mdiMinus : mdiPlus"></Icon>
+            <BasicIcon :name="active ? mdiMinus : mdiPlus"></BasicIcon>
         </div>
     </a>
 </template>
 <script setup>
 import { mdiPlus, mdiMinus } from '@mdi/js'
-import Icon from '@/components/Icon.vue'
+import BasicIcon from '@/components/BasicIcon.vue'
 
 defineProps({
     title: {

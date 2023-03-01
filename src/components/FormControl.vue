@@ -1,7 +1,7 @@
 <template>
     <div :class="controlCls">
-        <slot :class="fail ? 'is-danger' : ''"></slot>
-        <Icon v-if="icon" :path="icon" size="16"></Icon>
+        <slot></slot>
+        <BasicIcon v-if="icon" :name="icon" size="16"></BasicIcon>
         <p :class="['help is-danger']" v-if="help">
             {{ help }}
         </p>
@@ -10,7 +10,7 @@
 
 <script setup>
 import { computed } from 'vue'
-import Icon from '@/components/Icon.vue'
+import BasicIcon from '@/components/BasicIcon.vue'
 const props = defineProps({
     expanded: Boolean,
     help: String, // 提示文字

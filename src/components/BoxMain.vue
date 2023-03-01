@@ -2,11 +2,9 @@
     <section class="section is-title-bar">
         <div class="level">
             <div class="level-left">
-                <div class="level-item">
-                    <ul>
-                        <li v-for="t in title">{{ t }}</li>
-                    </ul>
-                </div>
+                <ul>
+                    <li v-for="t in route.meta.title">{{ t }}</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -16,7 +14,6 @@
 </template>
 
 <script setup>
-defineProps({
-    title: Array
-})
+import { useRoute } from 'vue-router'
+const route = useRoute()
 </script>

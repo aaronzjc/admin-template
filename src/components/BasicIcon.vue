@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 
 const props = defineProps({
-    path: {
+    name: {
         type: String,
         required: true
     },
@@ -21,21 +21,26 @@ const props = defineProps({
     left: {
         type: Boolean,
         default: true
-    }
+    },
+    color: String
+})
+
+const colorClass = computed(() => {
+    return props.color ? 'has-text-' + props.color : ''
 })
 
 const iconSize = computed(() => props.size ?? 16)
 </script>
 
 <template>
-    <span :class="['icon', { 'is-left': left }]">
+    <span :class="['icon', { 'is-left': left }, colorClass]">
         <svg
             viewBox="0 0 24 24"
             :width="iconSize"
             :height="iconSize"
             class="inline-block"
         >
-            <path fill="currentColor" :d="path" />
+            <path fill="currentColor" :d="name" />
         </svg>
         <slot />
     </span>

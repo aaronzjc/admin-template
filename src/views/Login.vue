@@ -12,26 +12,26 @@
                     </header>
                     <div class="card-content">
                         <form>
-                            <Field>
-                                <Control :icon="mdiAccount" expanded>
+                            <FormField>
+                                <FormControl :icon="mdiAccount" expanded>
                                     <input
                                         class="input"
                                         type="text"
                                         placeholder="用户名"
                                     />
-                                </Control>
-                            </Field>
-                            <Field class="password">
-                                <Control :icon="mdiLock" expanded>
+                                </FormControl>
+                            </FormField>
+                            <FormField class="password">
+                                <FormControl :icon="mdiLock" expanded>
                                     <input
                                         class="input"
                                         type="password"
                                         placeholder="密码"
                                     />
-                                </Control>
-                            </Field>
+                                </FormControl>
+                            </FormField>
 
-                            <Field>
+                            <FormField>
                                 <div
                                     class="is-flex is-justify-content-space-between"
                                 >
@@ -46,41 +46,41 @@
                                         <a class="">忘记密码?</a>
                                     </label>
                                 </div>
-                            </Field>
+                            </FormField>
 
-                            <Field group>
-                                <Control expanded>
+                            <FormField group>
+                                <FormControl expanded>
                                     <button
                                         class="button is-light is-fullwidth"
                                     >
                                         注册
                                     </button>
-                                </Control>
-                                <Control expanded>
+                                </FormControl>
+                                <FormControl expanded>
                                     <button
                                         class="button is-primary is-fullwidth"
                                     >
                                         登录
                                     </button>
-                                </Control>
-                            </Field>
+                                </FormControl>
+                            </FormField>
                             <div class="is-divider">OR</div>
-                            <Field group center>
+                            <FormField group center>
                                 <div class="buttons">
-                                    <button class="button is-dark">
-                                        <Icon
-                                            :path="mdiGithub"
+                                    <button class="button is-dark is-small">
+                                        <BasicIcon
+                                            :name="mdiGithub"
                                             :size="32"
-                                        ></Icon>
+                                        ></BasicIcon>
                                     </button>
-                                    <button class="button is-dark">
-                                        <Icon
-                                            :path="mdiGoogle"
+                                    <button class="button is-dark is-small">
+                                        <BasicIcon
+                                            :name="mdiGoogle"
                                             :size="24"
-                                        ></Icon>
+                                        ></BasicIcon>
                                     </button>
                                 </div>
-                            </Field>
+                            </FormField>
                         </form>
                     </div>
                 </div>
@@ -90,8 +90,8 @@
 </template>
 
 <script setup>
-import Field from '@/components/form/Field.vue'
-import Control from '@/components/form/Control.vue'
-import Icon from '@/components/Icon.vue'
+import FormField from '@/components/FormField.vue'
+import FormControl from '@/components/FormControl.vue'
+import BasicIcon from '@/components/BasicIcon.vue'
 import { mdiAccount, mdiGithub, mdiGoogle, mdiLock } from '@mdi/js'
 </script>

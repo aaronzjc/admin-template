@@ -15,7 +15,7 @@
 
 <script setup>
 import { RouterView } from 'vue-router'
-import Menu from '@/components/menu/Menu.vue'
+import Menu from '@/components/Menu.vue'
 
 import { useStyleStore } from '@/stores/style.js'
 

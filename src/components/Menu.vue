@@ -5,14 +5,14 @@
                 class="navbar-item is-hidden-desktop jb-aside-mobile-toggle"
                 @click="styleStore.toggleAside()"
             >
-                <Icon
-                    :path="
+                <BasicIcon
+                    :name="
                         styleStore.isAsideMobileOpen
                             ? mdiBackburger
                             : mdiForwardburger
                     "
                     :size="24"
-                ></Icon>
+                ></BasicIcon>
             </a>
             <div class="navbar-item has-control">
                 <div class="control"></div>
@@ -24,7 +24,7 @@
                 data-target="navbar-menu"
                 @click="styleStore.toggleNav()"
             >
-                <Icon :path="mdiDotsVertical"></Icon>
+                <BasicIcon :name="mdiDotsVertical"></BasicIcon>
             </a>
         </div>
         <div
@@ -48,7 +48,7 @@
                         <div class="is-user-name">
                             <span>{{ mainStore.userInfo.username }}</span>
                         </div>
-                        <Icon :path="mdiChevronDown"></Icon>
+                        <BasicIcon :name="mdiChevronDown"></BasicIcon>
                     </a>
                     <div class="navbar-dropdown">
                         <a href="#" class="navbar-item">
@@ -77,11 +77,11 @@
                     title="Github"
                     class="navbar-item has-divider is-desktop-icon-only"
                 >
-                    <Icon :path="mdiGithub"></Icon>
+                    <BasicIcon :name="mdiGithub"></BasicIcon>
                     <span>Github</span>
                 </a>
                 <a title="退出登录" class="navbar-item is-desktop-icon-only">
-                    <Icon :path="mdiLogout"></Icon>
+                    <BasicIcon :name="mdiLogout"></BasicIcon>
                     <span>退出登录</span>
                 </a>
             </div>
@@ -114,11 +114,11 @@ import {
     mdiChevronDown,
     mdiGithub
 } from '@mdi/js'
-import Icon from '@/components/Icon.vue'
+import BasicIcon from '@/components/BasicIcon.vue'
 import { useStyleStore } from '@/stores/style.js'
-import MenuItem from '@/components/menu/Item.vue'
+import MenuItem from '@/components/MenuItem.vue'
 import { useRouter } from 'vue-router'
-import { useMainStore } from '../../stores/main'
+import { useMainStore } from '@/stores/main'
 
 const styleStore = useStyleStore()
 

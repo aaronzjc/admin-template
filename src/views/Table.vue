@@ -1,19 +1,30 @@
 <template>
-    <Main :title="['表单']">
+    <BoxMain>
         <div class="card has-table">
             <header class="card-header">
-                <div class="card-header-title">网站列表</div>
-                <div class="card-header-action">
-                    <div class="field is-grouped">
-                        <p class="control">
-                            <input
-                                class="input"
-                                type="text"
-                                placeholder="输入关键词..."
-                            />
-                        </p>
-                        <p class="control">
-                            <a class="button is-primary">搜索</a>
+                <p class="card-header-title">
+                    <BasicIcon :name="mdiTable"></BasicIcon>
+                    网站列表
+                </p>
+                <div class="card-header-action level">
+                    <div class="level-left">
+                        <div class="field is-grouped">
+                            <p class="control">
+                                <input
+                                    class="input"
+                                    type="text"
+                                    placeholder="输入关键词..."
+                                />
+                            </p>
+                            <p class="control">
+                                <a class="button is-primary">搜索</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="level-right">
+                        <p class="buttons">
+                            <button class="button is-info">新增</button>
+                            <button class="button is-info">导出</button>
                         </p>
                     </div>
                 </div>
@@ -624,9 +635,25 @@
                 </div>
             </div>
         </div>
-    </Main>
+    </BoxMain>
 </template>
 
 <script setup>
-import Main from '@/components/Main.vue'
+import BasicIcon from '@/components/BasicIcon.vue'
+import BoxMain from '@/components/BoxMain.vue'
+import { mdiTable } from '@mdi/js'
+import { reactive } from 'vue'
+
+const sample = reactive({
+    list: [
+        {
+            avatar: 'https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg',
+            username: 'aaronzjc',
+            company: '贝壳',
+            city: '成都',
+            progress: '90',
+            create_at: '2023-02-27 12:00'
+        }
+    ]
+})
 </script>

@@ -8,7 +8,7 @@ import {
 
 export const menus = [
     {
-        route: 'dashboard',
+        route: 'home',
         title: '后台总览',
         icon: mdiMonitor,
         active: false

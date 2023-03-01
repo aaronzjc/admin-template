@@ -1,7 +1,7 @@
 <template>
-    <Main :title="['二级菜单', '页面2']"> </Main>
+    <BoxMain> </BoxMain>
 </template>
 
 <script setup>
-import Main from '@/components/Main.vue'
+import BoxMain from '@/components/BoxMain.vue'
 </script>
