@@ -8,8 +8,10 @@
 @import 'mixins';
 
 /* Theme components */
+@import 'element';
 @import 'menu';
 @import 'card';
 @import 'form';
 @import 'section';
-@import 'page';
+@import 'custom';
+@import 'animate';

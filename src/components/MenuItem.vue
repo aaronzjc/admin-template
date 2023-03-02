@@ -9,7 +9,7 @@
         >
         </MenuLink>
 
-        <ul v-if="_menu.children">
+        <ul v-if="_menu.children && _menu.active">
             <li v-for="subMenu in _menu.children">
                 <MenuLink
                     :title="subMenu.title"

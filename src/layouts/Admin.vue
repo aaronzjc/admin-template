@@ -8,13 +8,18 @@
         >
             <Menu></Menu>
 
-            <RouterView />
+            <RouterView v-slot="{ Component, route }">
+                <Transition name="page">
+                    <KeepAlive>
+                        <component :is="Component" :key="route.path" />
+                    </KeepAlive>
+                </Transition>
+            </RouterView>
         </div>
     </div>
 </template>
 
 <script setup>
-import { RouterView } from 'vue-router'
 import Menu from '@/components/Menu.vue'
 
 import { useStyleStore } from '@/stores/style.js'

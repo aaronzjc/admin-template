@@ -1,16 +1,18 @@
 <template>
-    <section class="section is-title-bar">
-        <div class="level">
-            <div class="level-left">
-                <ul>
-                    <li v-for="t in route.meta.title">{{ t }}</li>
-                </ul>
+    <div class="section-box">
+        <section class="section is-title-bar">
+            <div class="level">
+                <div class="level-left">
+                    <ul>
+                        <li v-for="t in route.meta.title">{{ t }}</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </section>
-    <section class="section is-main-section">
-        <slot />
-    </section>
+        </section>
+        <section class="section is-main-section">
+            <slot />
+        </section>
+    </div>
 </template>
 
 <script setup>
