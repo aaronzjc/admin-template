@@ -1,12 +1,12 @@
 .is-divider {
     display: flex;
     align-items: center;
-    color: #dadada;
-    margin: 0.5rem 0;
-    font-size: $size-base * 0.8;
+    color: #aaa;
+    margin: 1rem 0;
+    font-size: $size-base * 0.85;
     align-self: stretch;
     gap: 1rem;
-
+    word-break: keep-all;
     &::before,
     &::after {
         content: '';

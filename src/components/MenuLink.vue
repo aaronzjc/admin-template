@@ -12,6 +12,7 @@
         </div>
     </a>
 </template>
+
 <script setup>
 import { mdiPlus, mdiMinus } from '@mdi/js'
 import BasicIcon from '@/components/BasicIcon.vue'

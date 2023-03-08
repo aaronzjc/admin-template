@@ -51,8 +51,11 @@
 .login.hero {
     height: 100%;
     justify-content: center;
-    background-image: linear-gradient(to right top, #123456, #eee);
+    background-image: linear-gradient(to right top, #004080, #ffc383);
 
+    .card-header {
+        border-bottom-width: 0;
+    }
     .card-header-title {
         padding: 1rem 1rem;
 
@@ -65,9 +68,16 @@
     .hero-body {
         flex-grow: 0;
     }
-
     .field.password {
         margin-top: 1rem;
         margin-bottom: 1.5rem;
+    }
+    .options {
+        display: flex;
+        justify-content: space-between;
+        font-size: $size-base * 0.9;
+        .forgot {
+            cursor: pointer;
+        }
     }
 }

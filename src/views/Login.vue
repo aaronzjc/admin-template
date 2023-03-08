@@ -11,7 +11,7 @@
                         </p>
                     </header>
                     <div class="card-content">
-                        <form>
+                        <form action="javascript:void(0);">
                             <FormField>
                                 <FormControl :icon="mdiAccount" expanded>
                                     <input
@@ -32,9 +32,7 @@
                             </FormField>
 
                             <FormField>
-                                <div
-                                    class="is-flex is-justify-content-space-between"
-                                >
+                                <div class="options">
                                     <label class="b-checkbox checkbox">
                                         <input type="checkbox" />
                                         <span class="check"></span>
@@ -43,7 +41,7 @@
                                         >
                                     </label>
                                     <label class="is-pull-right">
-                                        <a class="">忘记密码?</a>
+                                        <span class="forgot">忘记密码?</span>
                                     </label>
                                 </div>
                             </FormField>
@@ -59,12 +57,13 @@
                                 <FormControl expanded>
                                     <button
                                         class="button is-primary is-fullwidth"
+                                        @click="$toast.success('登录成功')"
                                     >
                                         登录
                                     </button>
                                 </FormControl>
                             </FormField>
-                            <div class="is-divider">OR</div>
+                            <div class="is-divider">其他方式</div>
                             <FormField group center>
                                 <div class="buttons">
                                     <button class="button is-dark is-small">
