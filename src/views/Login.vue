@@ -63,7 +63,7 @@
                                     </button>
                                 </FormControl>
                             </FormField>
-                            <div class="is-divider">其他方式</div>
+                            <Divider title="其他方式" />
                             <FormField group center>
                                 <div class="buttons">
                                     <button class="button is-dark is-small">
@@ -93,4 +93,5 @@ import FormField from '@/components/FormField.vue'
 import FormControl from '@/components/FormControl.vue'
 import BasicIcon from '@/components/BasicIcon.vue'
 import { mdiAccount, mdiGithub, mdiGoogle, mdiLock } from '@mdi/js'
+import Divider from '@/components/Divider.vue'
 </script>
