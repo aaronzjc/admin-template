@@ -40,8 +40,10 @@ const router = useRouter()
 const route = useRoute()
 
 function menuClick(menu) {
-    if (menu.route && menu.route != route.name) {
-        router.push({ name: menu.route })
+    if (menu.route) {
+        if (menu.route != route.name) {
+            router.push({ name: menu.route })
+        }
         return
     }
     menu.active = !menu.active
