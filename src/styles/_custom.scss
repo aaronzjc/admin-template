@@ -1,49 +1,13 @@
-.is-tiles-wrapper {
-    margin-bottom: $default-padding;
-}
+html {
+    height: 100%;
 
-.modal-card {
-    width: $modal-card-width;
-}
-
-.modal-card-foot {
-    background-color: $modal-card-foot-background-color;
-}
-
-@include mobile {
-    .modal .modal-card {
-        width: $modal-card-width-mobile;
-        margin: 0 auto;
-    }
-}
-
-.is-user-avatar {
-    &.has-max-width {
-        max-width: $size-base * 7;
+    body,
+    #app {
+        height: 100%;
     }
 
-    &.is-aligned-center {
-        margin: 0 auto;
-    }
-
-    img {
-        margin: 0 auto;
-        border-radius: $radius-rounded;
-    }
-}
-
-.icon.has-update-mark {
-    position: relative;
-
-    &:after {
-        content: '';
-        width: $icon-update-mark-size;
-        height: $icon-update-mark-size;
-        position: absolute;
-        top: 1px;
-        right: 1px;
-        background-color: $icon-update-mark-color;
-        border-radius: $radius-rounded;
+    .container-box {
+        overflow-x: hidden;
     }
 }
 

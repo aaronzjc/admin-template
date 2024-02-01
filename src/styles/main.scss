@@ -2,16 +2,13 @@
 @import 'theme-default';
 
 /* Core Libs & Lib configs */
-@import 'libs/all';
+@import 'import';
 
 /* Mixins */
 @import 'mixins';
 
 /* Theme components */
-@import 'element';
-@import 'menu';
-@import 'card';
-@import 'form';
-@import 'section';
+@import 'base';
+@import 'component';
 @import 'custom';
 @import 'animate';

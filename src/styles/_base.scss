@@ -1,0 +1,677 @@
+/**
+ * 修改框架组件样式，保持统一
+ */
+
+//  Card
+.card:not(:last-child) {
+    margin-bottom: $default-padding;
+}
+.card {
+    border-radius: $radius-large;
+    border: $card-border;
+
+    &.has-table {
+        .card-content {
+            padding: 0;
+        }
+        .b-table {
+            border-radius: $radius-large;
+            overflow: hidden;
+        }
+    }
+
+    &.is-card-widget {
+        .card-content {
+            padding: $default-padding * 0.5;
+        }
+    }
+
+    .card-header {
+        border-bottom: 1px solid $base-color-light;
+        flex-direction: column;
+
+        .card-header-action {
+            padding: 1rem 0.75rem;
+        }
+    }
+
+    .card-content {
+        hr {
+            margin-left: $card-content-padding * -1;
+            margin-right: $card-content-padding * -1;
+        }
+    }
+
+    .is-widget-icon {
+        .icon {
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+
+    .is-widget-label {
+        .subtitle {
+            color: $grey;
+        }
+    }
+}
+
+// Section
+section.section.is-main-section {
+    padding: $default-padding;
+}
+section.section.is-title-bar {
+    padding: $size-base $default-padding;
+    border-bottom: $light-border;
+
+    ul {
+        li {
+            display: inline-block;
+            padding: 0 $default-padding * 0.5 0 0;
+            font-size: $default-padding;
+            color: $title-bar-color;
+
+            &:after {
+                display: inline-block;
+                content: '/';
+                padding-left: $default-padding * 0.5;
+            }
+
+            &:last-child {
+                padding-right: 0;
+                color: $title-bar-active-color;
+
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+section.hero.is-hero-bar {
+    background-color: $hero-bar-background;
+    border-bottom: $light-border;
+
+    .hero-body {
+        padding: $default-padding;
+
+        .level-item {
+            &.is-hero-avatar-item {
+                margin-right: $default-padding;
+            }
+
+            > div > .level {
+                margin-bottom: $default-padding * 0.5;
+            }
+
+            .subtitle + p {
+                margin-top: $default-padding * 0.5;
+            }
+        }
+
+        .button {
+            &.is-hero-button {
+                background-color: rgba($white, 0.5);
+                font-weight: 300;
+                @include transition(background-color);
+
+                &:hover {
+                    background-color: $white;
+                }
+            }
+        }
+    }
+}
+.content-box.has-navbar-fixed-top {
+    padding-top: $navbar-height;
+}
+
+// Navbar
+aside.aside {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 40;
+    height: 100vh;
+    padding: 0;
+    box-shadow: $aside-box-shadow;
+    background: $aside-background-color;
+
+    .aside-tools {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: $aside-tools-background-color;
+        color: $aside-tools-color;
+        height: $navbar-height;
+        flex: 1;
+    }
+
+    .menu-list {
+        li {
+            a {
+                display: flex;
+                align-items: center;
+
+                &.has-dropdown-icon .dropdown-icon {
+                    position: absolute;
+                    right: 0;
+                }
+                &.has-dropdown-icon.is-active {
+                    color: $menu-item-color;
+                }
+
+                .menu-item-label {
+                    height: 1.5rem;
+                    line-height: 1.375rem;
+                }
+            }
+
+            ul {
+                display: none;
+                border-left: 0;
+                background-color: darken($base-color, 2.5%);
+                padding-left: 0;
+                margin: 0 0 $default-padding * 0.5;
+
+                li {
+                    a {
+                        padding: $default-padding * 0.5 0 $default-padding * 0.5
+                            $default-padding * 2 + 0.75;
+                        font-size: $aside-submenu-font-size;
+
+                        &.has-icon {
+                            padding-left: 0;
+                        }
+                    }
+                }
+            }
+
+            &.is-active ul {
+                display: block;
+            }
+        }
+    }
+
+    .menu-label {
+        padding: 0 $default-padding * 0.5;
+        margin-top: $default-padding * 0.5;
+        margin-bottom: $default-padding * 0.5;
+    }
+}
+nav.navbar {
+    box-shadow: $navbar-box-shadow;
+
+    .navbar-item {
+        &.has-user-avatar {
+            .is-user-avatar {
+                margin-right: $default-padding * 0.5;
+                display: inline-flex;
+                width: $navbar-avatar-size;
+                height: $navbar-avatar-size;
+            }
+        }
+
+        &.has-divider {
+            border-right: $navbar-divider-border;
+        }
+
+        &.no-left-space {
+            padding-left: 0;
+        }
+
+        &.has-dropdown {
+            padding-right: 0;
+            padding-left: 0;
+
+            .navbar-link {
+                padding-right: $navbar-item-h-padding;
+                padding-left: $navbar-item-h-padding;
+            }
+        }
+
+        &.has-control {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .control {
+            .input {
+                color: $navbar-input-color;
+                border: 0;
+                box-shadow: none;
+                background: transparent;
+
+                &::placeholder {
+                    color: $navbar-input-placeholder-color;
+                }
+            }
+        }
+    }
+}
+@include desktop {
+    .content-box {
+        &.has-aside-left {
+            &.has-aside-expanded {
+                &,
+                nav.navbar {
+                    padding-left: $aside-width;
+                }
+            }
+
+            aside.is-placed-left {
+                display: block;
+            }
+        }
+    }
+
+    aside.aside.is-expanded {
+        width: $aside-width;
+
+        .menu-list {
+            @include icon-with-update-mark($aside-icon-width);
+
+            span.menu-item-label {
+                display: inline-block;
+            }
+
+            li.is-active {
+                ul {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    nav.navbar {
+        .navbar-item {
+            padding-right: $navbar-item-h-padding;
+            padding-left: $navbar-item-h-padding;
+
+            &:not(.is-desktop-icon-only) {
+                .icon:first-child {
+                    margin-right: $default-padding * 0.5;
+                }
+            }
+
+            &.is-desktop-icon-only {
+                span:not(.icon) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+@include touch {
+    .content-box,
+    nav.navbar {
+        @include transition(margin-left);
+    }
+
+    .content-box.has-aside-mobile-transition {
+        &,
+        nav.navbar {
+            width: 100vw;
+        }
+
+        aside.aside {
+            width: $aside-mobile-width;
+            display: block;
+            left: $aside-mobile-width * -1;
+
+            .image {
+                img {
+                    max-width: $aside-mobile-width * 0.33;
+                }
+            }
+
+            .menu-list {
+                li.is-active {
+                    ul {
+                        display: block;
+                    }
+                }
+
+                a {
+                    @include icon-with-update-mark($aside-icon-width);
+
+                    span.menu-item-label {
+                        display: inline-block;
+                    }
+                }
+            }
+
+            @include transition(left);
+        }
+    }
+
+    .content-box.has-aside-mobile-expanded {
+        &,
+        nav.navbar {
+            margin-left: $aside-mobile-width;
+        }
+
+        aside.aside {
+            left: 0;
+        }
+    }
+
+    nav.navbar {
+        display: flex;
+        padding-right: 0;
+
+        .navbar-brand {
+            flex: 1;
+
+            &.is-right {
+                flex: none;
+            }
+        }
+
+        .navbar-item {
+            &.no-left-space-touch {
+                padding-left: 0;
+            }
+        }
+
+        .navbar-menu {
+            position: absolute;
+            width: 100vw;
+            padding-top: 0;
+            top: $navbar-height;
+            left: 0;
+
+            .navbar-item {
+                .icon:first-child {
+                    margin-right: $default-padding * 0.5;
+                }
+
+                &.has-dropdown {
+                    > .navbar-link {
+                        background-color: $white-ter;
+
+                        .icon:last-child {
+                            display: none;
+                        }
+                    }
+                }
+
+                &.has-user-avatar {
+                    > .navbar-link {
+                        display: flex;
+                        align-items: center;
+                        padding-top: $default-padding * 0.5;
+                        padding-bottom: $default-padding * 0.5;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Form
+.field {
+    &.has-check {
+        .field-body {
+            margin-top: $default-padding * 0.125;
+        }
+    }
+    .control {
+        height: 100%;
+
+        .mdi-24px.mdi-set,
+        .mdi-24px.mdi:before {
+            font-size: inherit;
+        }
+
+        .radio-group,
+        .check-group {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+.upload {
+    .upload-draggable {
+        display: block;
+    }
+}
+.input,
+.textarea,
+select {
+    box-shadow: none;
+
+    &:focus,
+    &:active {
+        box-shadow: none !important;
+    }
+}
+.switch input[type='checkbox'] + .check:before {
+    box-shadow: none;
+}
+.switch,
+.b-checkbox.checkbox {
+    input[type='checkbox'] {
+        &:focus + .check,
+        &:focus:checked + .check {
+            box-shadow: none !important;
+        }
+    }
+}
+.b-checkbox.checkbox input[type='checkbox'],
+.b-radio.radio input[type='radio'] {
+    & + .check {
+        border: $checkbox-border;
+    }
+}
+
+// Table
+table.table {
+    thead {
+        th {
+            border-bottom-width: 1px;
+        }
+    }
+
+    td,
+    th {
+        &.checkbox-cell {
+            .b-checkbox.checkbox:not(.button) {
+                margin-right: 0;
+                width: 20px;
+
+                .control-label {
+                    display: none;
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    td {
+        vertical-align: middle;
+
+        .image {
+            margin: 0 auto;
+            width: $table-avatar-size;
+            height: $table-avatar-size;
+        }
+
+        &.is-progress-col {
+            min-width: 5rem;
+            vertical-align: middle;
+        }
+    }
+}
+.b-table {
+    .table {
+        border: 0;
+        border-radius: 0;
+    }
+
+    /* This stylizes buefy's pagination */
+    .table-wrapper {
+        margin-bottom: 0;
+    }
+
+    .table-wrapper + .level {
+        padding: $notification-padding;
+        padding-left: $card-content-padding;
+        padding-right: $card-content-padding;
+        margin: 0;
+        border-top: $base-color-light;
+        background: $notification-background-color;
+
+        .pagination-link {
+            background: $button-background-color;
+            color: $button-color;
+            border-color: $button-border-color;
+
+            &.is-current {
+                border-color: $button-active-border-color;
+            }
+        }
+
+        .pagination-previous,
+        .pagination-next,
+        .pagination-link {
+            border-color: $button-border-color;
+            color: $base-color;
+
+            &[disabled] {
+                background-color: transparent;
+            }
+        }
+    }
+}
+@include mobile {
+    .card {
+        &.has-table {
+            .b-table {
+                .table-wrapper + .level {
+                    .level-left + .level-right {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+        &.has-mobile-sort-spaced {
+            .b-table {
+                .field.table-mobile-sort {
+                    padding-top: $default-padding * 0.5;
+                }
+            }
+        }
+    }
+    .b-table {
+        .field.table-mobile-sort {
+            padding: 0 $default-padding * 0.5;
+        }
+
+        .table-wrapper.has-mobile-cards {
+            tr {
+                box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
+                margin-bottom: 3px !important;
+            }
+            td {
+                &.is-progress-col {
+                    span,
+                    progress {
+                        display: flex;
+                        width: 45%;
+                        align-items: center;
+                        align-self: center;
+                    }
+                }
+
+                &.checkbox-cell,
+                &.is-image-cell {
+                    border-bottom: 0 !important;
+                }
+
+                &.checkbox-cell,
+                &.is-actions-cell {
+                    &:before {
+                        display: none;
+                    }
+                }
+
+                &.has-no-head-mobile {
+                    &:before {
+                        display: none;
+                    }
+
+                    span {
+                        display: block;
+                        width: 100%;
+                    }
+
+                    &.is-progress-col {
+                        progress {
+                            width: 100%;
+                        }
+                    }
+
+                    &.is-image-cell {
+                        .image {
+                            width: $table-avatar-size-mobile;
+                            height: auto;
+                            margin: 0 auto $default-padding * 0.25;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Modal
+.is-tiles-wrapper {
+    margin-bottom: $default-padding;
+}
+.modal-card {
+    width: $modal-card-width;
+}
+.modal-card-foot {
+    background-color: $modal-card-foot-background-color;
+}
+@include mobile {
+    .modal .modal-card {
+        width: $modal-card-width-mobile;
+        margin: 0 auto;
+    }
+}
+
+// Ext
+.is-user-avatar {
+    &.has-max-width {
+        max-width: $size-base * 7;
+    }
+
+    &.is-aligned-center {
+        margin: 0 auto;
+    }
+
+    img {
+        margin: 0 auto;
+        border-radius: $radius-rounded;
+    }
+}
+
+.icon.has-update-mark {
+    position: relative;
+
+    &:after {
+        content: '';
+        width: $icon-update-mark-size;
+        height: $icon-update-mark-size;
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        background-color: $icon-update-mark-color;
+        border-radius: $radius-rounded;
+    }
+}
