@@ -20,9 +20,8 @@
 </template>
 
 <script setup>
-import Menu from '@/components/Menu.vue'
-
 import { useStyleStore } from '@/stores/style.js'
+import Menu from '@/components/Menu.vue'
 
 const styleStore = useStyleStore()
 </script>

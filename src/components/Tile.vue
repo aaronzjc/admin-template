@@ -34,6 +34,7 @@
 </template>
 <script setup>
 import BasicIcon from '@/components/BasicIcon.vue'
+
 defineProps({
     items: Array
 })

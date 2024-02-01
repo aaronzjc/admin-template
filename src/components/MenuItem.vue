@@ -34,20 +34,10 @@ const props = defineProps({
     }
 })
 
-const _menu = reactive(props.menu)
-
 const router = useRouter()
 const route = useRoute()
 
-function menuClick(menu) {
-    if (menu.route) {
-        if (menu.route != route.name) {
-            router.push({ name: menu.route })
-        }
-        return
-    }
-    menu.active = !menu.active
-}
+const _menu = reactive(props.menu)
 
 watch(
     () => route.name,
@@ -68,4 +58,14 @@ watch(
     },
     { immediate: true }
 )
+
+function menuClick(menu) {
+    if (menu.route) {
+        if (menu.route != route.name) {
+            router.push({ name: menu.route })
+        }
+        return
+    }
+    menu.active = !menu.active
+}
 </script>

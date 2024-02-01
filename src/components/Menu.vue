@@ -104,7 +104,8 @@
 </template>
 
 <script setup>
-import { menus } from '@/config.js'
+import { useRouter } from 'vue-router'
+
 import {
     mdiForwardburger,
     mdiBackburger,
@@ -114,13 +115,11 @@ import {
     mdiChevronDown,
     mdiGithub
 } from '@mdi/js'
-import BasicIcon from '@/components/BasicIcon.vue'
-import { useStyleStore } from '@/stores/style.js'
-import MenuItem from '@/components/MenuItem.vue'
-import { useRouter } from 'vue-router'
+import { menus } from '@/config.js'
 import { useMainStore } from '@/stores/main'
-
-const styleStore = useStyleStore()
+import { useStyleStore } from '@/stores/style'
+import BasicIcon from '@/components/BasicIcon.vue'
+import MenuItem from '@/components/MenuItem.vue'
 
 const router = useRouter()
 router.beforeEach(() => {
@@ -128,6 +127,7 @@ router.beforeEach(() => {
     styleStore.isNavMobileOpen = false
 })
 
+const styleStore = useStyleStore()
 const mainStore = useMainStore()
 mainStore.setUser({
     avatar: 'https://avatars.githubusercontent.com/u/2597771?v=4',

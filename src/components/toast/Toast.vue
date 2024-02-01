@@ -8,6 +8,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+
 const props = defineProps({
     text: {
         type: String,
@@ -18,7 +19,9 @@ const props = defineProps({
         required: false
     }
 })
+
 const active = ref(false)
+
 onMounted(() => {
     active.value = true
     setTimeout(() => (active.value = false), 3000)

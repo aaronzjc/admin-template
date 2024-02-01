@@ -639,10 +639,10 @@
 </template>
 
 <script setup>
+import { reactive } from 'vue'
+import { mdiTable } from '@mdi/js'
 import BasicIcon from '@/components/BasicIcon.vue'
 import BoxMain from '@/components/BoxMain.vue'
-import { mdiTable } from '@mdi/js'
-import { reactive } from 'vue'
 
 const sample = reactive({
     list: [

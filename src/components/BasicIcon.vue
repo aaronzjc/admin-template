@@ -1,3 +1,17 @@
+<template>
+    <span :class="['icon', { 'is-left': left }, colorClass]">
+        <svg
+            viewBox="0 0 24 24"
+            :width="iconSize"
+            :height="iconSize"
+            class="inline-block"
+        >
+            <path fill="currentColor" :d="name" />
+        </svg>
+        <slot />
+    </span>
+</template>
+
 <script setup>
 import { computed } from 'vue'
 
@@ -31,17 +45,3 @@ const colorClass = computed(() => {
 
 const iconSize = computed(() => props.size ?? 16)
 </script>
-
-<template>
-    <span :class="['icon', { 'is-left': left }, colorClass]">
-        <svg
-            viewBox="0 0 24 24"
-            :width="iconSize"
-            :height="iconSize"
-            class="inline-block"
-        >
-            <path fill="currentColor" :d="name" />
-        </svg>
-        <slot />
-    </span>
-</template>

@@ -89,9 +89,9 @@
 </template>
 
 <script setup>
+import { mdiAccount, mdiGithub, mdiGoogle, mdiLock } from '@mdi/js'
 import FormField from '@/components/FormField.vue'
 import FormControl from '@/components/FormControl.vue'
 import BasicIcon from '@/components/BasicIcon.vue'
-import { mdiAccount, mdiGithub, mdiGoogle, mdiLock } from '@mdi/js'
 import Divider from '@/components/Divider.vue'
 </script>

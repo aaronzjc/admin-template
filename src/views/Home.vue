@@ -5,10 +5,11 @@
 </template>
 
 <script setup>
-import BoxMain from '@/components/BoxMain.vue'
-import { mdiAccount } from '@mdi/js'
 import { reactive } from 'vue'
+import { mdiAccount } from '@mdi/js'
+import BoxMain from '@/components/BoxMain.vue'
 import Tile from '@/components/Tile.vue'
+
 const items = reactive([
     {
         title: '当前在线人数',

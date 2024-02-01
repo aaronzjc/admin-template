@@ -145,9 +145,9 @@
 </template>
 
 <script setup>
+import { mdiAccount, mdiBallot, mdiMail, mdiUpload } from '@mdi/js'
 import BoxMain from '@/components/BoxMain.vue'
 import FormField from '@/components/FormField.vue'
 import FormControl from '@/components/FormControl.vue'
-import { mdiAccount, mdiBallot, mdiMail, mdiUpload } from '@mdi/js'
 import BasicIcon from '@/components/BasicIcon.vue'
 </script>
