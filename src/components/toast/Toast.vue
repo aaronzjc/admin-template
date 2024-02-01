@@ -24,6 +24,6 @@ const active = ref(false)
 
 onMounted(() => {
     active.value = true
-    setTimeout(() => (active.value = false), 3000)
+    setTimeout(() => (active.value = false), 1000)
 })
 </script>
